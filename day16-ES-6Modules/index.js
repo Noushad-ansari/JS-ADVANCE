@@ -2,112 +2,82 @@
 // // import * as login from './login.js';
 
 
-// console.log(msg)
 
-// // setMessage("hello i am calling you from index.js file")
-
-// // let newmsg = getMessage()
-// // console.log(newmsg)
-
-
-
-
-
-    //  function add() {
-
-    //         let about = document.querySelector(".about")
-    //     about.classList.remove("display")
-    //     console.log("add")
-    //     let addButton = document.querySelector("#addButton")
-    //     addButton.removeEventListener("click")
-    //     } 
+  
  
-// function add() {
+//1st method
+// function add(){
+//    let menu =  document.querySelector("#menu")
+//     let li =  document.createElement("li")
+//     li.textContent = "I am from Javascript"
 
-//     let about = document.querySelector(".about")
-// about.classList.remove("display")
-// console.log("add")
-// }
-// function remove() {
-//     let about = document.querySelector(".about")
-// about.classList.add("display")
-// console.log("remove")
-// }
-
-//add class
-// let addButton = document.querySelector("#addButton")
-// addButton.addEventListener("click",function(){
-//     let about = document.querySelector(".about")
-//     about.classList.remove("display")
-//     console.log("add")
-// })
-
-
-// Remove class
-// let removeButton = document.querySelector("#removeButton")
-// removeButton.addEventListener("click",function(){
-//     let about = document.querySelector(".about")
-//     about.classList.add("display")
-//     console.log("remove")
-// })
-
-
-
-
-
-// function remove(){
-//     let menu =  document.querySelector("#menu")
-
-//     menu.removeChild(menu.lastElementChild)
-// }
-
-// let add =  document.querySelector("#add").onclick = function () {
-//     let menu =  document.querySelector("#menu")
-//     let li = document.createElement("li")
-//     li.textContent = "hello i am from javascript"
-//     console.log(li)
-//     li.style.background = "lightgray"
-//     li.style.color = "teal"
-//     li.style.border = "1px solid green"
-    
 //     menu.appendChild(li)
 // }
 
-
-// let remove =  document.querySelector("#remove").onclick  =  function(){
+// function remove(){
 //     let menu =  document.querySelector("#menu")
-
 //     menu.removeChild(menu.lastElementChild)
-//     console.log('element removed')
-// } 
+// }
 
-let add = document.querySelector("#add").addEventListener("click", function () {
+// 2nd method
+// document.querySelector("#add").onclick = function(){
+//     let menu =  document.querySelector("#menu")
+//         let li =  document.createElement("li")
+//         li.textContent = "I am from Javascript"
+    
+//         menu.appendChild(li)
+// }
+
+
+// document.querySelector("#remove").onclick = function(){
+//     let menu =  document.querySelector("#menu")
+//         menu.removeChild(menu.lastElementChild)
+// }
+
+// 3rd mehtod
+// adding element
+let menu = document.querySelector("#add")
+
+function adding(){
     let menu =  document.querySelector("#menu")
-        let li = document.createElement("li")
-        li.textContent = "hello"
-        console.log(li)
-        li.style.background = "lightgray"
-        li.style.color = "teal"
-        li.style.border = "1px solid green"
+            let li =  document.createElement("li")
+            li.textContent = "I am from Javascript"
+    
+            // ****update button
+            let update = document.createElement("button")
+            update.textContent = "Update"
+            update.style.cssText = "background:yellow;font-size:30px;color:white;"
+           
+            
+            // ***delete button
+            let Remove = document.createElement("button")
+            Remove.textContent = "Delete"
+            Remove.style.background = "red"
+            Remove.style['font-size'] = "30px"
         
-        // menu.appendChild(li)
-       localStorage.setItem("li",li.innerHTML)
- })
+            li.append(update)
+            li.append(Remove)
+            menu.appendChild(li)
+}
 
- 
-let show = document.querySelector("#show").addEventListener("change",function (e) {
-console.log(e.target)
+menu.addEventListener('click',adding)
 
+
+
+
+//Removing element
+document.querySelector("#remove").addEventListener('click',function(){
+    let menu =  document.querySelector("#menu")
+            menu.removeChild(menu.lastElementChild)
 })
 
-let data = localStorage.getItem("li")
-let h1 = document.querySelector("#showData")
-h1.append(data) 
 
- let remove = document.querySelector("#remove") .addEventListener("click",function(){
-    let menu =  document.querySelector("#menu")
-
-        menu.removeChild(menu.lastElementChild)
-        console.log('element removed')
- })
+function changeColor(){
+    let btn = document.querySelector("#about")
+ btn.classList.toggle('btnColor')
+}
+// function removeClass(){
+//     let btn = document.querySelector("#about")
+//     btn.classList.remove('btnColor')
+// }
 

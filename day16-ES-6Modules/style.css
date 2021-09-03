@@ -52,3 +52,10 @@
 .display{
   display:none ;
 }
+
+.btnColor{
+  color:white;
+  background:grey;
+  padding:20px;
+  
+}

@@ -1,0 +1,40 @@
+*{
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+#contentBox{
+  height: 100vh;
+  width: 100vw;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  background: lightgrey;
+  flex-wrap: wrap;
+}
+
+.display:nth-child(even){
+  height: 200px;
+    width: 200px;
+    margin-top: 20px;
+    background-color: lightcoral;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.display:nth-child(odd){
+
+  height: 200px;
+    width: 200px;
+    margin-top: 20px;
+    background-color: rgb(53, 78, 192);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.text_center{
+  text-align: center;
+}
